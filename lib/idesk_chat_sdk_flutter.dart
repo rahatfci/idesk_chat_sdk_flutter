@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class IdeskChatSdkFlutter {
-  static WebViewController controller = WebViewController()
+  static final WebViewController _controller = WebViewController()
     ..setJavaScriptMode(JavaScriptMode.unrestricted)
     ..setBackgroundColor(Colors.transparent)
     ..setNavigationDelegate(
@@ -18,6 +18,6 @@ class IdeskChatSdkFlutter {
     ..loadFlutterAsset('assets/my_html.html');
 
   static showChat() async {
-    return WebViewWidget(controller: controller);
+    return WebViewWidget(controller: _controller);
   }
 }
