@@ -11,16 +11,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFE83A38)),
-          useMaterial3: true,
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFE83A38)),
+        useMaterial3: true,
+      ),
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('IDesk Flutter Chat SDK'),
         ),
-        home: Scaffold(
-          appBar: AppBar(
-            title: const Text('IDesk Flutter Chat SDK'),
-          ),
-          body: IdeskChatSdkFlutter.showChat(),
-        ));
+        body: IdeskChatSdkFlutter.showChat(),
+      ),
+    );
   }
 }

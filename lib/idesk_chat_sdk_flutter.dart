@@ -17,7 +17,9 @@ class IdeskChatSdkFlutter {
     )
     ..loadFlutterAsset('assets/my_html.html');
 
-  static showChat() async {
-    return WebViewWidget(controller: _controller);
+  static Widget showChat() {
+    return WebViewWidget(
+      controller: _controller,
+    );
   }
 }
