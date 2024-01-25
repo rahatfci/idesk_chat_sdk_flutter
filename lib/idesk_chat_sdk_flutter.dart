@@ -1,7 +1,23 @@
 library idesk_chat_sdk_flutter;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
+import 'package:flutter/material.dart';
+import 'package:webview_flutter/webview_flutter.dart';
+
+class IdeskChatSdkFlutter {
+  static WebViewController controller = WebViewController()
+    ..setJavaScriptMode(JavaScriptMode.unrestricted)
+    ..setBackgroundColor(Colors.transparent)
+    ..setNavigationDelegate(
+      NavigationDelegate(
+        onProgress: (int progress) {},
+        onPageStarted: (String url) {},
+        onPageFinished: (String url) {},
+        onWebResourceError: (WebResourceError error) {},
+      ),
+    )
+    ..loadFlutterAsset('assets/my_html.html');
+
+  static showChat() async {
+    return WebViewWidget(controller: controller);
+  }
 }

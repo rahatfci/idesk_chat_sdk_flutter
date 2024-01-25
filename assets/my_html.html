@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body><noscript>You need to enable JavaScript to run this app.</noscript>
+<script>
+      window.$_iDesk_Web_Chat_API || (function(d, w) {
+        w.__iDeskWebChat_account = 1694592792000;
+        w.iDeskCustomerInfo = {
+          "name": "kamal",
+          "rmn": "019667653443"
+        };
+        w.miscellaneous = {
+          "float": 0
+        };
+        const head = document.head;
+        const link = document.createElement('link');
+        link.href = 'https://toolstatic.idesk360.com/chat/stylesheet.css';
+        link.rel = 'stylesheet';
+        head.append(link);
+        const webchat = d.createElement('div');
+        webchat.setAttribute('id', 'webchat');
+        document.body.appendChild(webchat);
+        const rc = d.createElement('script');
+        rc.type = 'text/javascript';
+        rc.async = true;
+        rc.src = 'https://toolstatic.idesk360.com/chat/bundle.js';
+        const s = d.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(rc, s);
+      })(document, window);
+    </script>
+</body>
+</html>
