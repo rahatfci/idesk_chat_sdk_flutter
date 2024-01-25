@@ -18,7 +18,9 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('IDesk Flutter Chat SDK'),
+          backgroundColor: const Color(0xFFE83A38),
+          title: const Text('IDesk Flutter Chat SDK',
+              style: TextStyle(color: Colors.white)),
         ),
         body: IdeskChatSdkFlutter.showChat(),
       ),

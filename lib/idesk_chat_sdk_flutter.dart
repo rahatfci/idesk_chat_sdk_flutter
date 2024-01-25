@@ -7,6 +7,7 @@ class IdeskChatSdkFlutter {
   static final WebViewController _controller = WebViewController()
     ..setJavaScriptMode(JavaScriptMode.unrestricted)
     ..setBackgroundColor(Colors.transparent)
+    ..enableZoom(false)
     ..setNavigationDelegate(
       NavigationDelegate(
         onProgress: (int progress) {},
@@ -15,7 +16,7 @@ class IdeskChatSdkFlutter {
         onWebResourceError: (WebResourceError error) {},
       ),
     )
-    ..loadFlutterAsset('assets/my_html.html');
+    ..loadFlutterAsset('packages/idesk_chat_sdk_flutter/assets/index.html');
 
   static Widget showChat() {
     return WebViewWidget(
