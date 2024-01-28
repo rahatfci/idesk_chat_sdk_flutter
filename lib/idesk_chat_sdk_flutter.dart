@@ -18,11 +18,6 @@ class IdeskChatSdkFlutter {
       ),
       onWebViewCreated: (InAppWebViewController controller) {
         _webViewController = controller;
-        _webViewController.addJavaScriptHandler(
-            handlerName: 'buttonClicked',
-            callback: (args) {
-              print(args);
-            });
       },
       onConsoleMessage: (controller, consoleMessage) {
         print(consoleMessage);
